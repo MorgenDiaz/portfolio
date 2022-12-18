@@ -1,9 +1,9 @@
 export default function Hero() {
   return (
     <section className="hero">
-      <div className="container">
-        <h1 className="font-semibold text-3xl mb-5">
-          Hi, my name is <span className="text-purple-900">Morgen Diaz</span>
+      <div className="container min-h-screen flex items-center border-b-0 bg-slate-50 font-normal text-gray-900 py-0 px-6 sm:px-20 mb-0 inset-0 sticky">
+        <h1 className="font-bold leading-normal sm:leading-none text-4xl sm:text-5xl lg:text-6xl mb-12 text-center md:text-left ">
+          Hi, my name is <span className="text-purple-700">Morgen Diaz</span>
           <br />
           Let me solve your coding troubles!
         </h1>
