@@ -14,8 +14,7 @@ export default function Hero() {
             <span className="inline-block leading-normal text-transparent bg-clip-text bg-gradient-to-br from-purple-800 to-purple-400">
               Morgen Diaz
             </span>
-            <br />
-            Let me solve your coding troubles!
+            <br />I turn concepts into realities.
           </h1>
           <p className="flex content-center justify-center tab-port:justify-start ">
             <a
