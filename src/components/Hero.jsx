@@ -17,11 +17,11 @@ export default function Hero() {
             <br />
             Let me solve your coding troubles!
           </h1>
-          <p className="flex justify-center border-2 border-purple-800 border-solid tab-port:justify-start hover:border-transparent hover:text-white">
+          <p className="flex justify-center tab-port:justify-start ">
             <a
               rel="noreferrer"
               href="#about"
-              className={`${BUTTON_DEFAULTS} w-full after:bg-gradient-to-br from-purple-800 to-purple-400 hover:after:w-full`}
+              className={`${BUTTON_DEFAULTS} border-2 border-purple-800 border-solid hover:border-transparent hover:text-white w-full after:bg-gradient-to-br from-purple-800 to-purple-400 hover:after:w-full`}
             >
               Know more
             </a>
