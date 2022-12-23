@@ -1,9 +1,11 @@
+import About from "./components/About";
 import Hero from "./components/Hero";
 
 function App() {
   return (
-    <div className="text-center bg-blue-300">
+    <div className="text-center">
       <Hero />
+      <About />
     </div>
   );
 }
