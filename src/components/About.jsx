@@ -12,11 +12,11 @@ export default function About() {
           About me
         </h2>
         <div className="flex flex-wrap gap-y-12 big-desktop:gap-y-0">
-          <div className="flex justify-center grow basis-1 big-desktop:basis-1/2">
+          <div className="flex justify-center grow basis-1 big-desktop:basis-1/2 drop-shadow-lg">
             <img
               src={profile}
               alt="profile morgen diaz"
-              className="rounded-lg h-72"
+              className="bg-purple-800 h-72"
             />
           </div>
           <div className="flex flex-wrap items-center content-center justify-center text-center justify-items-center tab-port-sm:justify-start tab-port-sm:text-left tab-port-sm:basis-1/2">
