@@ -1,5 +1,6 @@
-import Section from "./Section";
+import Section from "./common/Section";
 import profile from "../assets/profile.jpg";
+import OutlinedButtonSecondary from "./common/OutlinedButtonSecondary";
 
 export default function About() {
   return (
@@ -16,13 +17,21 @@ export default function About() {
               className="rounded-lg h-72"
             />
           </div>
-          <div className="flex items-center text-left basis-1/2">
-            <p>
+          <div className="flex flex-wrap items-center content-center text-left basis-1/2">
+            <p className="w-full">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non
               similique quidem veniam deleniti aut iure a provident nobis
               asperiores voluptatum odio quae, vel totam fugiat eligendi cumque
               neque? Vitae, quod?
             </p>
+            <span className="flex mt-3">
+              <OutlinedButtonSecondary
+                text={"View Resume"}
+                className={
+                  "hover:text-purple-800 after:bg-gradient-to-br from-white to-white hover:after:w-full"
+                }
+              />
+            </span>
           </div>
         </div>
       </div>
