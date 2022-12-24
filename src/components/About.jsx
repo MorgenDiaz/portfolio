@@ -3,23 +3,42 @@ import profile from "../assets/profile.jpg";
 import OutlinedButtonSecondary from "./common/OutlinedButtonSecondary";
 import ABOUT_PARAGRAPH from "../data/about";
 import ResumePDF from "../assets/Resume_Morgen_Diaz.pdf";
+import { useEffect } from "react";
 
-export default function About() {
+export default function About({ scrollReveal }) {
+  useEffect(() => {
+    scrollReveal(".about-title", {
+      delay: 300,
+      distance: "0px",
+      origin: "bottom",
+    });
+
+    scrollReveal(".about-image-wrapper", {
+      delay: 600,
+      origin: "bottom",
+    });
+
+    scrollReveal(".about-info-container", {
+      delay: 1000,
+      origin: window.innerWidth > 768 ? "left" : "bottom",
+    });
+  }, [scrollReveal]);
+
   return (
     <Section className="flex justify-center h-full text-white bg-purple-800 border-t-0 tab-port-sm:pb-36 bg-gradient-to-br from-purple-800 to-purple-400 tab-land:clip-wedge-right">
       <div className="container flex-col">
-        <h2 className="m-0 mb-12 text-3xl font-bold uppercase tab-port-sm:text-5xl">
+        <h2 className="m-0 mb-12 text-3xl font-bold uppercase about-title tab-port-sm:text-5xl">
           About me
         </h2>
         <div className="flex flex-wrap gap-y-12 big-desktop:gap-y-0">
-          <div className="flex justify-center grow basis-1 big-desktop:basis-1/2 drop-shadow-lg">
+          <div className="flex justify-center about-image-wrapper grow basis-1 big-desktop:basis-1/2 drop-shadow-lg">
             <img
               src={profile}
               alt="profile morgen diaz"
               className="bg-purple-800 h-72"
             />
           </div>
-          <div className="flex flex-wrap items-center content-center justify-center text-center justify-items-center tab-port-sm:justify-start tab-port-sm:text-left tab-port-sm:basis-1/2">
+          <div className="flex flex-wrap items-center content-center justify-center text-center about-info-container justify-items-center tab-port-sm:justify-start tab-port-sm:text-left tab-port-sm:basis-1/2">
             <p className="w-full text-lg whitespace-pre-line">
               {ABOUT_PARAGRAPH}
             </p>
