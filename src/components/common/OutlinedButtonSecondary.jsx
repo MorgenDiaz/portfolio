@@ -1,8 +1,14 @@
-export default function OutlinedButtonSecondary({ href, text, className }) {
+export default function OutlinedButtonSecondary({
+  href,
+  text,
+  target,
+  className,
+}) {
   return (
     <a
       rel="noreferrer"
       href={href}
+      target={target}
       className={`
         inline-block py-0.5 px-4 relative z-10
         text-lg font-bold text-white  
