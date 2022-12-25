@@ -1,11 +1,30 @@
+import { useEffect } from "react";
 import Tilt from "react-parallax-tilt";
 import LinkPrimary from "./common/LinkPrimary";
 import OutlinedButtonPrimary from "./common/OutlinedButtonPrimary";
 
-export default function Project({ title, image, demoLink, gitHubLink }) {
+export default function Project({
+  title,
+  image,
+  demoLink,
+  gitHubLink,
+  scrollReveal,
+}) {
+  useEffect(() => {
+    scrollReveal(".project-info", {
+      delay: 500,
+      origin: window.innerWidth > 768 ? "left" : "bottom",
+    });
+
+    scrollReveal(".project-image", {
+      delay: 1000,
+      origin: window.innerWidth > 1000 ? "left" : "bottom",
+    });
+  }, [scrollReveal]);
+
   return (
     <div className="flex gap-x-8">
-      <div className="flex-col text-left info basis-1/3">
+      <div className="flex-col text-left project-info info basis-1/3">
         <h3 className="mb-4 text-3xl font-bold text-gray-900">{title}</h3>
         <div>
           <p className="mb-4">
@@ -33,7 +52,8 @@ export default function Project({ title, image, demoLink, gitHubLink }) {
           />
         </div>
       </div>
-      <div className="basis-2/3">
+
+      <div className="drop-shadow-md project-image basis-2/3">
         <Tilt
           tiltReverse={true}
           className="parallax-effect-img"

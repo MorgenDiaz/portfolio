@@ -12,7 +12,7 @@ function App() {
     <div className="text-center">
       <Hero scrollReveal={scrollReveal.reveal} />
       <About scrollReveal={scrollReveal.reveal} />
-      <Projects />
+      <Projects scrollReveal={scrollReveal.reveal} />
     </div>
   );
 }
