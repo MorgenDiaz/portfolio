@@ -1,6 +1,9 @@
-export default function Section({ className = "", children }) {
+export default function Section({ className = "", id = "", children }) {
   return (
-    <section className={`border-none px-4 py-20 phone-xs:px-0 ${className}`}>
+    <section
+      id={id}
+      className={`border-none px-4 py-20 phone-xs:px-0 ${className}`}
+    >
       {children}
     </section>
   );

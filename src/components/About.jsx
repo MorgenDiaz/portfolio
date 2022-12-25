@@ -25,7 +25,10 @@ export default function About({ scrollReveal }) {
   }, [scrollReveal]);
 
   return (
-    <Section className="flex justify-center h-full text-white bg-purple-800 border-t-0 tab-port-sm:pb-36 bg-gradient-to-br from-purple-800 to-purple-400 tab-land:clip-wedge-right">
+    <Section
+      id="about"
+      className="flex justify-center h-full text-white bg-purple-800 border-t-0 tab-port-sm:pb-36 bg-gradient-to-br from-purple-800 to-purple-400 tab-land:clip-wedge-right"
+    >
       <div className="container flex-col">
         <h2 className="m-0 mb-12 text-3xl font-bold uppercase about-title tab-port-sm:text-5xl">
           About me

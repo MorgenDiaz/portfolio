@@ -5,6 +5,7 @@ import About from "./components/About";
 import Hero from "./components/Hero";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 function App() {
   let scrollReveal = ScrollReveal(DEFAULT_PROPS);
@@ -15,6 +16,7 @@ function App() {
       <About scrollReveal={scrollReveal.reveal} />
       <Projects scrollReveal={scrollReveal.reveal} />
       <Contact scrollReveal={scrollReveal.reveal} />
+      <Footer />
     </div>
   );
 }
