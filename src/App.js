@@ -14,7 +14,7 @@ function App() {
       <Hero scrollReveal={scrollReveal.reveal} />
       <About scrollReveal={scrollReveal.reveal} />
       <Projects scrollReveal={scrollReveal.reveal} />
-      <Contact />
+      <Contact scrollReveal={scrollReveal.reveal} />
     </div>
   );
 }
