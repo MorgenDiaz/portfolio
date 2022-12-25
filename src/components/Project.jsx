@@ -23,11 +23,13 @@ export default function Project({
   }, [scrollReveal]);
 
   return (
-    <div className="flex gap-x-8">
-      <div className="flex-col text-left project-info info basis-1/3">
-        <h3 className="mb-4 text-3xl font-bold text-gray-900">{title}</h3>
+    <div className="flex flex-wrap tab-port:flex-nowrap gap-x-8 gap-y-7 tab-port-sm:gap-y-14">
+      <div className="flex-col text-left project-info info tab-port:basis-1/3">
+        <h3 className="mb-4 text-2xl font-bold text-gray-900 tab-port-sm:text-3xl">
+          {title}
+        </h3>
         <div>
-          <p className="mb-4">
+          <p className="mb-4 text-base leading-relaxed tab-port-sm:leading-normal tab-port-sm:text-lg tab-port:text-base ">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
             perspiciatis vitae beatae consequatur consequuntur? Pariatur aliquam
             ipsum quae quam cumque ipsa adipisci quo. Dolore possimus dolorum
@@ -53,7 +55,7 @@ export default function Project({
         </div>
       </div>
 
-      <div className="drop-shadow-md project-image basis-2/3">
+      <div className="drop-shadow-md project-image tab-port:basis-2/3">
         <Tilt
           tiltReverse={true}
           className="parallax-effect-img"
