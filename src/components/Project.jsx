@@ -5,9 +5,10 @@ import OutlinedButtonPrimary from "./common/OutlinedButtonPrimary";
 
 export default function Project({
   title,
+  description,
   image,
   demoLink,
-  gitHubLink,
+  githubLink,
   scrollReveal,
 }) {
   useEffect(() => {
@@ -29,11 +30,8 @@ export default function Project({
           {title}
         </h3>
         <div>
-          <p className="mb-4 text-base leading-relaxed tab-port-sm:leading-normal tab-port-sm:text-lg tab-port:text-base ">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
-            perspiciatis vitae beatae consequatur consequuntur? Pariatur aliquam
-            ipsum quae quam cumque ipsa adipisci quo. Dolore possimus dolorum
-            beatae voluptatem illo repellendus!
+          <p className="mb-4 text-base leading-relaxed whitespace-pre-line tab-port-sm:leading-normal tab-port-sm:text-lg tab-port:text-base">
+            {description}
           </p>
         </div>
         <div className="flex gap-x-4">
@@ -47,7 +45,7 @@ export default function Project({
           />
 
           <LinkPrimary
-            href={gitHubLink}
+            href={githubLink}
             target={"_blank"}
             text={"Source Code"}
             className={"hover:pl-2"}
