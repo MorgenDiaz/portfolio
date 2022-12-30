@@ -27,7 +27,7 @@ export default function Projects({ scrollReveal }) {
               description={project.description}
               image={project.image}
               demoLink={project.demoLink}
-              gitHubLink={project.githubLink}
+              githubLink={project.githubLink}
               scrollReveal={scrollReveal}
             />
           );
