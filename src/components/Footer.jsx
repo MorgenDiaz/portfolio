@@ -1,6 +1,10 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleUp } from "@fortawesome/free-solid-svg-icons";
-import { faLinkedinIn, faGithub } from "@fortawesome/free-brands-svg-icons";
+import {
+  faLinkedinIn,
+  faGithub,
+  faGoodreads,
+} from "@fortawesome/free-brands-svg-icons";
 
 export default function Footer() {
   return (
@@ -31,6 +35,16 @@ export default function Footer() {
             <FontAwesomeIcon
               className="my-1 text-3xl transition-all duration-200 ease-in hover:-translate-y-0.5"
               icon={faGithub}
+            />
+          </a>
+          <a
+            rel="noreferrer"
+            href="https://www.goodreads.com/user/show/98054938-morgen-diaz"
+            target="_blank"
+          >
+            <FontAwesomeIcon
+              className="my-1 text-3xl transition-all duration-200 ease-in hover:-translate-y-0.5"
+              icon={faGoodreads}
             />
           </a>
         </div>
