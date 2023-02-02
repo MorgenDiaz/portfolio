@@ -1,3 +1,4 @@
+import Helmet from "react-helmet";
 import Section from "./common/Section";
 import profile from "../assets/profile.jpg";
 import OutlinedButtonSecondary from "./common/OutlinedButtonSecondary";
@@ -29,6 +30,14 @@ export default function About({ scrollReveal }) {
       id="about"
       className="flex justify-center h-full text-white bg-purple-800 border-t-0 tab-port-sm:pb-36 bg-gradient-to-br from-purple-800 to-purple-400 tab-land:clip-wedge-right"
     >
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>About | Software Engineering Portfolio</title>
+        <meta
+          name="description"
+          content="I am a technology evangelist with 8+ years of experience in the software development industry. Skilled and adaptable, looking to provide successful technology solutions for companies."
+        />
+      </Helmet>
       <div className="container flex-col">
         <h2 className="m-0 mb-12 text-3xl font-bold uppercase about-title tab-port-sm:text-5xl">
           About me
