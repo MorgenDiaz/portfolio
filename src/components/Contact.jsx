@@ -17,7 +17,7 @@ export default function Contact({ scrollReveal }) {
           Contact
         </h2>
 
-        <p class="mb-6 text-2xl">
+        <p className="mb-6 text-2xl">
           Please feel free to reach out if you have any questions about coding
           or think that I may be able to assist you in solving a technical
           problem!
