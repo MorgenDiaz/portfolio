@@ -3,12 +3,14 @@ export default function OutlinedButtonSecondary({
   text,
   target,
   className,
+  onClick = () => {},
 }) {
   return (
     <a
       rel="noreferrer"
       href={href}
       target={target}
+      onClick={onClick}
       className={`
         inline-block py-0.5 px-4 relative z-10
         text-lg font-bold text-white  

@@ -2,6 +2,7 @@ export default function OutlinedButtonPrimary({
   href,
   text,
   target,
+  onClick = () => {},
   className,
 }) {
   return (
@@ -9,6 +10,7 @@ export default function OutlinedButtonPrimary({
       rel="noreferrer"
       href={href}
       target={target}
+      onClick={onClick}
       className={`
         inline-block py-0.5 px-4 relative z-10
         text-lg font-bold text-purple-800

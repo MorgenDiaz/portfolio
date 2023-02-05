@@ -1,12 +1,15 @@
+import { useEffect, useContext } from "react";
 import Helmet from "react-helmet";
 import Section from "./common/Section";
 import profile from "../assets/profile.jpg";
 import OutlinedButtonSecondary from "./common/OutlinedButtonSecondary";
 import ABOUT_PARAGRAPH from "../data/about";
 import ResumePDF from "../assets/Resume_Morgen_Diaz.pdf";
-import { useEffect } from "react";
+import { AnalyticsContext } from "../AnalyticsContext";
 
 export default function About({ scrollReveal }) {
+  const analytics = useContext(AnalyticsContext);
+
   useEffect(() => {
     scrollReveal(".about-title", {
       delay: 300,
@@ -24,6 +27,14 @@ export default function About({ scrollReveal }) {
       origin: window.innerWidth > 768 ? "left" : "bottom",
     });
   }, [scrollReveal]);
+
+  const trackViewResumeEvent = () => {
+    analytics.event({
+      category: "Button",
+      action: "Click",
+      label: "View Resume",
+    });
+  };
 
   return (
     <Section
@@ -60,6 +71,7 @@ export default function About({ scrollReveal }) {
                 text={"View Resume"}
                 href={ResumePDF}
                 target={"_blank"}
+                onClick={trackViewResumeEvent}
                 className={
                   "hover:text-purple-800 after:bg-gradient-to-br from-white to-white hover:after:w-full"
                 }

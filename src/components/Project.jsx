@@ -1,5 +1,6 @@
-import { useEffect } from "react";
+import { useEffect, useContext } from "react";
 import Tilt from "react-parallax-tilt";
+import { AnalyticsContext } from "../AnalyticsContext";
 import LinkPrimary from "./common/LinkPrimary";
 import OutlinedButtonPrimary from "./common/OutlinedButtonPrimary";
 
@@ -11,6 +12,8 @@ export default function Project({
   githubLink,
   scrollReveal,
 }) {
+  const analytics = useContext(AnalyticsContext);
+
   useEffect(() => {
     scrollReveal(".project-info", {
       delay: 500,
@@ -22,6 +25,22 @@ export default function Project({
       origin: window.innerWidth > 1000 ? "left" : "bottom",
     });
   }, [scrollReveal]);
+
+  const trackViewProjectEvent = () => {
+    analytics.event({
+      category: "Button",
+      action: "Click",
+      label: `View project ${title}`,
+    });
+  };
+
+  const trackViewProjectSourceEvent = () => {
+    analytics.event({
+      category: "Button",
+      action: "Click",
+      label: `View project source ${title}`,
+    });
+  };
 
   return (
     <div className="flex flex-wrap tab-port:flex-nowrap gap-x-8 gap-y-7 tab-port-sm:gap-y-14">
@@ -39,6 +58,7 @@ export default function Project({
             href={demoLink}
             target={"_blank"}
             text={"See Live"}
+            onClick={trackViewProjectEvent}
             className={
               "hover:text-white after:bg-gradient-to-br from-purple-800 to-purple-400 hover:after:w-full"
             }
@@ -48,6 +68,7 @@ export default function Project({
             href={githubLink}
             target={"_blank"}
             text={"Source Code"}
+            onClick={trackViewProjectSourceEvent}
             className={"hover:pl-2"}
           />
         </div>
