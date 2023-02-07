@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import ScrollReveal from "scrollreveal";
 import { DEFAULT_PROPS } from "./data/scrollRevealConfig";
 import ReactGA from "react-ga";
@@ -12,6 +13,10 @@ ReactGA.initialize("G-J3GEGYGFRE");
 
 function App() {
   let scrollReveal = ScrollReveal(DEFAULT_PROPS);
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
 
   return (
     <AnalyticsContext.Provider value={ReactGA}>
