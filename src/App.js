@@ -15,7 +15,11 @@ function App() {
   let scrollReveal = ScrollReveal(DEFAULT_PROPS);
 
   useEffect(() => {
-    ReactGA.pageview(window.location.pathname + window.location.search);
+    ReactGA.pageview(
+      window.location.pathname + window.location.search,
+      null,
+      "Landing Section"
+    );
   }, []);
 
   return (
